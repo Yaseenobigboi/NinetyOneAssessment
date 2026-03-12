@@ -17,7 +17,7 @@ def save_rows(rows):
     for row in rows:
         conn.execute(
             "INSERT INTO scores (first_name, second_name, score) VALUES (?, ?, ?)",
-            (row["First Name"], row["Second Name"], row["Score"])
+            (row["First Name"], row["Second Name"], int(row["Score"]))
         )
     conn.commit()
     conn.close()

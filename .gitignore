@@ -1,3 +1,5 @@
-# Assessment input files
 *.csv
 *.pdf
+*.db
+__pycache__/
+.venv/
