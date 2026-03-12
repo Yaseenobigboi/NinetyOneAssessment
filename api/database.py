@@ -47,5 +47,5 @@ def get_top_scorers():
         (top,)
     ).fetchall()
     conn.close()
-    return rows
+    return rows, top
 
