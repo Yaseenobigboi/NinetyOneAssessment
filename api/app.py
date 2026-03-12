@@ -24,7 +24,7 @@ def get_score(first_name, second_name):
 # Get all top scorers.
 @app.route("/scores/top", methods=["GET"])
 def get_top():
-    rows = database.get_top_scorers()
+    rows, top = database.get_top_scorers()
     results = [{"first_name": r["first_name"], "second_name": r["second_name"], "score": r["score"]} for r in rows]
     return jsonify(results)
 
@@ -32,7 +32,3 @@ def get_top():
 if __name__ == "__main__":
     app.run(debug=True)
 
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
